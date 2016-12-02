@@ -18,8 +18,9 @@ node {
 }
 
 node {
-	state('结束') {
-		sh "curl 'www.baidu.com'"
+	state('是否通过？') {
+		input 'Ready to go?'
+		curl 'www.baidu.com'
 	}
 	
 }
