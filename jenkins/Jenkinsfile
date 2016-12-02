@@ -1,5 +1,5 @@
 node {
-	stage{
-		sh 'echo 开始获取提交源码'
+	stage('获取更新'){
+		echo '开始获取提交源码'
 	}
 }
