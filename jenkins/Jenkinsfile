@@ -3,3 +3,16 @@ node {
 		echo '开始获取提交源码'
 	}
 }
+
+node {
+	stage('检查代码规范'){
+		echo '开始检查代码规范'
+	}
+}
+
+node {
+	stage('自动化测试'){
+		sh "pwd"
+		echo 'mvn test'
+	}
+}
