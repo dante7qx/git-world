@@ -16,3 +16,10 @@ node {
 		echo 'mvn test'
 	}
 }
+
+node {
+	state('结束') {
+		sh "curl www.baidu.com"
+	}
+	
+}
