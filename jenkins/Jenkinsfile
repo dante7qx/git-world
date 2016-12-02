@@ -19,7 +19,7 @@ node {
 
 node {
 	state('结束') {
-		sh "curl www.baidu.com"
+		sh "curl 'www.baidu.com'"
 	}
 	
 }
