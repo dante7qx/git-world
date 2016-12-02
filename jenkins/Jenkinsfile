@@ -20,7 +20,9 @@ node {
 node {
 	state('是否通过？') {
 		input 'Ready to go?'
-		curl 'www.baidu.com'
+		withEnv("PATH=$PATH") {
+			sh 'curl www.baidu.com'
+		}
 	}
 	
 }
