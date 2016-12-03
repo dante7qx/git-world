@@ -1,6 +1,7 @@
 node {
 	stage('获取代码更新'){
 		echo '开始代码更新'
+		echo "git url: 'https://github.com/dante7qx/git-world.git'"
 	}
 }
 
