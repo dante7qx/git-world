@@ -1,26 +1,56 @@
 node {
-	stage('获取更新'){
-		echo '开始获取提交源码'
+	stage('获取代码更新'){
+		echo '开始代码更新'
 	}
 }
 
 node {
-	stage('检查代码规范'){
-		echo '开始检查代码规范'
+	stage('代码静态扫描'){
+		echo '开始代码静态扫描'
 	}
 }
 
 node {
-	stage('自动化测试'){
+	stage('单元测试'){
 		sh "pwd"
 		echo 'mvn test'
 	}
 }
 
 node {
-	stage('是否通过？') {
-		input 'Ready to go?'
+	stage('构建容器镜像'){
+		echo 'docker build'
+	}
+}
+
+node {
+	stage('部署Dev环境'){
+		echo '部署Dev环境'
+	}
+}
+
+node {
+	stage('开发人员验收？') {
+		input '是否通过?'
 		sh "curl www.baidu.com"
 	}
-	
+}
+
+node {
+	stage('部署SIT环境'){
+		echo '部署SIT环境'
+	}
+}
+
+node {
+	stage('接口测试'){
+		echo '接口测试'
+	}
+}
+
+node {
+	stage('测试人员验收？') {
+		input '是否通过?'
+		echo '流水线结束！'
+	}
 }
