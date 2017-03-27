@@ -1,0 +1,23 @@
+From 8b9769378743acd5642feb5372a6eaa477f67987 Mon Sep 17 00:00:00 2001
+From: dante <sunchao.0129@163.com>
+Date: Tue, 29 Nov 2016 12:56:09 +0800
+Subject: [PATCH] add print
+
+---
+ Hello.java | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/Hello.java b/Hello.java
+index 1106aea..3c8cae0 100644
+--- a/Hello.java
++++ b/Hello.java
+@@ -1,5 +1,6 @@
+ public class Hello {
+ 	public static void main() {
+ 		System.out.println("Hello World!");
++		System.out.println("A Patch teset!");
+ 	}
+ }
+-- 
+2.9.3 (Apple Git-75)
+
